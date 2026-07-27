@@ -79,6 +79,36 @@ export default function ContactPage() {
         </div>
 
         <div className="section-label">
+          <span className="eyebrow">Connect With Us</span>
+          <h2>Follow the Story of Clay</h2>
+          <p className="social-tag">Where our craft meets your heart — stories, hands and fire, fresh from the workshop.</p>
+        </div>
+
+        <div className="social-grid">
+          <div className="social-card">
+            <div className="ic"><svg viewBox="0 0 24 24"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.76-1.77C18.28 5 12 5 12 5s-6.28 0-7.84.43A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.76 1.77C5.72 19 12 19 12 19s6.28 0 7.84-.43a2.5 2.5 0 0 0 1.76-1.77A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15.2V8.8L15.6 12 10 15.2z" /></svg></div>
+            <h3>YouTube</h3>
+            <p className="social-handle">@CharuPotteryArt</p>
+            <p>Watch pottery come alive on the wheel.</p>
+            <hr className="divider-line" /><a className="social-btn" href="https://www.youtube.com/@CharuPotteryArt" target="_blank" rel="noopener noreferrer">Visit Channel ↗</a>
+          </div>
+          <div className="social-card">
+            <div className="ic"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38c-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.15a6.65 6.65 0 1 0 0 13.3 6.65 6.65 0 0 0 0-13.3zm0 10.97a4.32 4.32 0 1 1 0-8.64 4.32 4.32 0 0 1 0 8.64zm8.4-11.24a1.55 1.55 0 1 1-3.1 0 1.55 1.55 0 0 1 3.1 0z" /></svg></div>
+            <h3>Instagram</h3>
+            <p className="social-handle">@charu_pottery_art</p>
+            <p>Behind-the-scenes &amp; new pieces.</p>
+            <hr className="divider-line" /><a className="social-btn" href="https://www.instagram.com/charu_pottery_art/" target="_blank" rel="noopener noreferrer">Visit Profile ↗</a>
+          </div>
+          <div className="social-card">
+            <div className="ic"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 5 3.66 9.13 8.44 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.45 2.89h-2.33v6.99C18.34 21.13 22 17 22 12c0-5.52-4.48-10-10-10z" /></svg></div>
+            <h3>Facebook</h3>
+            <p className="social-handle">CHARU Pottery Art</p>
+            <p>Updates &amp; community.</p>
+            <hr className="divider-line" /><a className="social-btn" href="https://www.facebook.com/profile.php?id=61592695525876" target="_blank" rel="noopener noreferrer">Visit Page ↗</a>
+          </div>
+        </div>
+
+        <div className="section-label">
           <span className="eyebrow">Before you write in</span>
           <h2>Quick answers</h2>
         </div>

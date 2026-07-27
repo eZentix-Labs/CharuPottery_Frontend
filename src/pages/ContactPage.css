@@ -80,6 +80,37 @@
 .contact-page .channel-card p{font-size:13.5px;color:var(--c-ink-soft);margin:0;}
 .contact-page .channel-card a{color:var(--c-terra-dark);text-decoration:none;font-weight:500;}
 
+/* SOCIAL CARDS */
+.contact-page .social-tag{
+  font-family:var(--ff-serif);font-style:italic;
+  color:var(--c-terra-dark);font-size:15.5px;margin:8px auto 0;max-width:480px;
+}
+.contact-page .divider-line{border:none;border-top:1px solid var(--c-line);margin:0 0 16px;}
+.contact-page .social-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:64px;}
+.contact-page .social-card{
+  background:var(--c-cream2);border:1px solid var(--c-line);border-radius:14px;
+  padding:24px 20px;display:flex;flex-direction:column;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.contact-page .social-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(90,55,30,.12);}
+.contact-page .social-card .ic{
+  width:44px;height:44px;border-radius:50%;
+  background:rgba(193,96,60,.12);
+  display:flex;align-items:center;justify-content:center;margin-bottom:14px;
+}
+.contact-page .social-card .ic svg{width:22px;height:22px;fill:var(--c-terra);}
+.contact-page .social-card h3{font-size:17px;font-weight:600;font-family:var(--ff-body);margin-bottom:2px;}
+.contact-page .social-handle{font-size:14px;font-weight:500;color:var(--c-terra-dark);margin:0 0 8px;}
+.contact-page .social-card p{font-size:13.5px;color:var(--c-ink-soft);margin:0 0 18px;}
+.contact-page .social-btn{
+  margin-top:auto;display:block;text-align:center;
+  background:var(--c-terra);color:#fff;
+  font-weight:600;font-size:14px;
+  padding:11px 16px;border-radius:10px;text-decoration:none;
+  transition:background .15s ease;
+}
+.contact-page .social-btn:hover{background:var(--c-terra-dark);}
+
 /* FAQ */
 .contact-page .faq{margin-bottom:64px;}
 .contact-page details{border-bottom:1px solid var(--c-line);padding:16px 0;}
@@ -108,6 +139,7 @@
 
 @media (max-width:720px){
   .contact-page .channel-grid{grid-template-columns:1fr 1fr;}
+  .contact-page .social-grid{grid-template-columns:1fr;}
   .contact-page .form-section{grid-template-columns:1fr;}
   .contact-page .wa-panel{flex-direction:column;text-align:center;padding:32px 24px;}
   .contact-page .wa-half{flex-direction:column;text-align:center;gap:16px;}
