@@ -18,18 +18,39 @@ export default function ContactPage() {
         </div>
 
         <div className="wa-panel">
-          <div className="wa-icon"><WaLogo /></div>
-          <div className="wa-text">
-            <span className="eyebrow">Fastest way to reach us</span>
-            <h2>Message us on WhatsApp</h2>
-            <p>You'll get an instant reply with store hours, order tracking and quick answers — a real person from our team follows up after that, usually within a few hours.</p>
-            <a className="wa-btn" href="https://wa.me/917699258249?text=Hi%20CHARU%2C%20I%20have%20a%20question" target="_blank" rel="noopener noreferrer">
-              <WaLogo width="18" height="18" style={{ fill: '#fff' }} />
-              Start a chat
-            </a>
-            <div className="wa-meta">
-              <span><span className="wa-dot" />Usually replies within 2–4 hrs</span>
-              <span><span className="wa-dot" />Auto-reply is instant</span>
+          <div className="wa-half">
+            <div className="wa-icon"><WaLogo /></div>
+            <div className="wa-text">
+              <span className="eyebrow">Fastest way to reach us</span>
+              <h2>Message us on WhatsApp</h2>
+              <p>You'll get an instant reply with store hours, order tracking and quick answers — a real person follows up within a few hours.</p>
+              <a className="wa-btn" href="https://wa.me/917699258249?text=Hi%20CHARU%2C%20I%20have%20a%20question" target="_blank" rel="noopener noreferrer">
+                <WaLogo width="18" height="18" style={{ fill: '#fff' }} />
+                Start a chat
+              </a>
+              <div className="wa-meta">
+                <span><span className="wa-dot" />Usually replies within 2–4 hrs</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="panel-sep" aria-hidden="true" />
+
+          <div className="wa-half">
+            <div className="wa-icon call-icon">
+              <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z" /></svg>
+            </div>
+            <div className="wa-text">
+              <span className="eyebrow">Prefer to talk?</span>
+              <h2>Call us directly</h2>
+              <p>Tap to call from your phone and speak with our team about orders, custom pieces or anything else.</p>
+              <a className="wa-btn call-btn" href="tel:+918436299320">
+                <svg viewBox="0 0 24 24" width="17" height="17" style={{ fill: '#fff' }}><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z" /></svg>
+                +91 84362 99320
+              </a>
+              <div className="wa-meta">
+                <span><span className="wa-dot call-dot" />Mon–Sun, 10am–7pm</span>
+              </div>
             </div>
           </div>
         </div>
@@ -43,22 +64,17 @@ export default function ContactPage() {
           <div className="channel-card">
             <div className="ic"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z" /></svg></div>
             <h3>Call us</h3>
-            <p><a href="tel:+917699258249">+91 76992 58249</a><br />Mon–Sun, 10am–7pm</p>
+            <p><a href="tel:+918436299320">+91 84362 99320</a><br />Mon–Sun, 10am–7pm</p>
           </div>
           <div className="channel-card">
             <div className="ic"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" /></svg></div>
             <h3>Email us</h3>
-            <p><a href="mailto:charuhelp2026@gmail.com">charuhelp2026@gmail.com</a><br />Replies within a day</p>
+            <p><a href="mailto:charupottery2026@gmail.com">charupottery2026@gmail.com</a><br />Replies within a day</p>
           </div>
           <div className="channel-card">
             <div className="ic"><svg viewBox="0 0 24 24"><path d="M12 2C7.6 2 4 5.6 4 10c0 5.5 8 12 8 12s8-6.5 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" /></svg></div>
             <h3>Visit the workshop</h3>
             <p>Mankar Yard, Mankar<br />Purba Bardhaman, West Bengal</p>
-          </div>
-          <div className="channel-card">
-            <div className="ic"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 9h-4v6h-2v-6H7V9h4V7c0-1.66 1.34-3 3-3h2v2h-2c-.55 0-1 .45-1 1v2h4l-1 2z" /></svg></div>
-            <h3>Follow along</h3>
-            <p><a href="https://www.instagram.com/charu_pottery_art/" target="_blank" rel="noopener noreferrer">@charu_pottery_art</a><br />Instagram — behind-the-scenes on the wheel</p>
           </div>
         </div>
 

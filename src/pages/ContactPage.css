@@ -37,10 +37,17 @@
   content:""; position:absolute; right:20px; bottom:-60px;
   width:120px; height:120px; border:1.5px solid rgba(247,241,230,.10); border-radius:50%;
 }
+.contact-page .wa-half{flex:1;display:flex;align-items:center;gap:28px;min-width:260px;position:relative;z-index:1;}
+.contact-page .panel-sep{width:1px;align-self:stretch;background:rgba(247,241,230,.16);}
 .contact-page .wa-icon{
   flex:0 0 auto; width:64px;height:64px; background:var(--c-wa);
   border-radius:50%; display:flex;align-items:center;justify-content:center;
 }
+.contact-page .call-icon{background:var(--c-terra);}
+.contact-page .call-icon svg{width:28px;height:28px;fill:#fff;}
+.contact-page .call-btn{background:var(--c-terra);}
+.contact-page .call-btn:hover{background:var(--c-terra-dark);}
+.contact-page .call-dot{background:var(--c-terra);}
 .contact-page .wa-icon svg{width:32px;height:32px;fill:#fff;}
 .contact-page .wa-text{flex:1;min-width:220px;position:relative;z-index:1;}
 .contact-page .wa-text .eyebrow{color:#EAD9B8;}
@@ -61,7 +68,7 @@
 .contact-page .section-label{text-align:center;margin-bottom:28px;}
 .contact-page .section-label .eyebrow{display:block;margin-bottom:6px;}
 .contact-page .section-label h2{font-size:26px;}
-.contact-page .channel-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:64px;}
+.contact-page .channel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:64px;}
 .contact-page .channel-card{background:var(--c-cream2);border:1px solid var(--c-line);border-radius:14px;padding:22px 18px;}
 .contact-page .channel-card .ic{
   width:38px;height:38px;border-radius:50%;
@@ -103,6 +110,8 @@
   .contact-page .channel-grid{grid-template-columns:1fr 1fr;}
   .contact-page .form-section{grid-template-columns:1fr;}
   .contact-page .wa-panel{flex-direction:column;text-align:center;padding:32px 24px;}
+  .contact-page .wa-half{flex-direction:column;text-align:center;gap:16px;}
+  .contact-page .panel-sep{width:100%;height:1px;align-self:auto;}
   .contact-page .wa-meta{justify-content:center;flex-wrap:wrap;}
   .contact-page .hero-c h1{font-size:32px;}
 }
