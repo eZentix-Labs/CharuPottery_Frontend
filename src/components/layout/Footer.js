@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FiInstagram, FiFacebook, FiYoutube, FiTwitter, FiSend } from 'react-icons/fi';
+import { FiInstagram, FiFacebook, FiYoutube, FiSend } from 'react-icons/fi';
 import toast from 'react-hot-toast';
 import { PotMark } from './Navbar';
 import './Footer.css';
@@ -32,10 +32,9 @@ export default function Footer() {
             soul of Indian pottery traditions, shaped by experienced hands.
           </p>
           <div className="footer-social">
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram"><FiInstagram size={17} /></a>
-            <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook"><FiFacebook size={17} /></a>
-            <a href="https://youtube.com" target="_blank" rel="noreferrer" aria-label="YouTube"><FiYoutube size={17} /></a>
-            <a href="https://twitter.com" target="_blank" rel="noreferrer" aria-label="Twitter"><FiTwitter size={17} /></a>
+            <a href="https://www.instagram.com/charu_pottery_art/" target="_blank" rel="noreferrer" aria-label="Instagram"><FiInstagram size={17} /></a>
+            <a href="https://www.facebook.com/profile.php?id=61592695525876" target="_blank" rel="noreferrer" aria-label="Facebook"><FiFacebook size={17} /></a>
+            <a href="https://www.youtube.com/@CharuPotteryArt" target="_blank" rel="noreferrer" aria-label="YouTube"><FiYoutube size={17} /></a>
           </div>
         </div>
 

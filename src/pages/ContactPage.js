@@ -58,7 +58,7 @@ export default function ContactPage() {
           <div className="channel-card">
             <div className="ic"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 9h-4v6h-2v-6H7V9h4V7c0-1.66 1.34-3 3-3h2v2h-2c-.55 0-1 .45-1 1v2h4l-1 2z" /></svg></div>
             <h3>Follow along</h3>
-            <p><a href="https://instagram.com/charupotteryart" target="_blank" rel="noopener noreferrer">@charupotteryart</a><br />Instagram — behind-the-scenes on the wheel</p>
+            <p><a href="https://www.instagram.com/charu_pottery_art/" target="_blank" rel="noopener noreferrer">@charu_pottery_art</a><br />Instagram — behind-the-scenes on the wheel</p>
           </div>
         </div>
 
