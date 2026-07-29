@@ -5,8 +5,6 @@ import ProductCard from '../components/product/ProductCard';
 import { FiFilter, FiX, FiChevronDown } from 'react-icons/fi';
 import './ProductsPage.css';
 
-const CLAY_TYPES = ['Stoneware', 'Earthenware', 'Porcelain', 'Terracotta', 'Bone China', 'Raku', 'Other'];
-const TECHNIQUES = ['Wheel-thrown', 'Hand-built', 'Slip-cast', 'Coiled', 'Other'];
 const SORT_OPTIONS = [
   { label: 'Newest', value: '-createdAt' },
   { label: 'Price: Low to High', value: 'price' },
@@ -138,30 +136,6 @@ export default function ProductsPage() {
               </div>
             </FilterGroup>
 
-            {/* Clay type */}
-            <FilterGroup title="Clay Type">
-              <div className="filter-options">
-                {CLAY_TYPES.map((t) => (
-                  <label key={t} className="filter-option">
-                    <input type="checkbox" checked={clayType === t} onChange={() => setFilter('clayType', clayType === t ? '' : t)} />
-                    {t}
-                  </label>
-                ))}
-              </div>
-            </FilterGroup>
-
-            {/* Technique */}
-            <FilterGroup title="Technique">
-              <div className="filter-options">
-                {TECHNIQUES.map((t) => (
-                  <label key={t} className="filter-option">
-                    <input type="checkbox" checked={technique === t} onChange={() => setFilter('technique', technique === t ? '' : t)} />
-                    {t}
-                  </label>
-                ))}
-              </div>
-            </FilterGroup>
-
             {/* Price range */}
             <FilterGroup title="Price Range (₹)">
               <div className="price-range">
@@ -189,12 +163,12 @@ export default function ProductsPage() {
             <FilterGroup title="Collections">
               <div className="filter-options">
                 <label className="filter-option">
-                  <input type="checkbox" checked={isFeatured === 'true'} onChange={() => setFilter('isFeatured', isFeatured === 'true' ? '' : 'true')} />
-                  Featured
-                </label>
-                <label className="filter-option">
                   <input type="checkbox" checked={isNewArrival === 'true'} onChange={() => setFilter('isNewArrival', isNewArrival === 'true' ? '' : 'true')} />
                   New Arrivals
+                </label>
+                <label className="filter-option">
+                  <input type="checkbox" checked={isFeatured === 'true'} onChange={() => setFilter('isFeatured', isFeatured === 'true' ? '' : 'true')} />
+                  Best Sellers
                 </label>
               </div>
             </FilterGroup>

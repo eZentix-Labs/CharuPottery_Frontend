@@ -139,9 +139,6 @@ export default function Navbar() {
         {/* Nav row */}
         <nav className="navbar-links">
           <NavLink to="/products" end className={navClass}>Shop All</NavLink>
-          <NavLink to="/products?isNewArrival=true" className={() => 'nav-link'}>New Arrivals</NavLink>
-          <NavLink to="/products?isFeatured=true" className={() => 'nav-link'}>Bestsellers</NavLink>
-          <Link to="/collections" className="nav-link">Category</Link>
           <Link to="/contact" className="nav-link">Contact</Link>
         </nav>
 
@@ -166,9 +163,6 @@ export default function Navbar() {
         <div className={`mobile-menu${menuOpen ? ' open' : ''}`}>
           <NavLink to="/" end className="mobile-link" onClick={() => setMenuOpen(false)}>Home</NavLink>
           <NavLink to="/products" className="mobile-link" onClick={() => setMenuOpen(false)}>Shop All</NavLink>
-          <NavLink to="/products?isNewArrival=true" className="mobile-link" onClick={() => setMenuOpen(false)}>New Arrivals</NavLink>
-          <NavLink to="/products?isFeatured=true" className="mobile-link" onClick={() => setMenuOpen(false)}>Bestsellers</NavLink>
-          <Link to="/collections" className="mobile-link" onClick={() => setMenuOpen(false)}>Category</Link>
           <Link to="/contact" className="mobile-link" onClick={() => setMenuOpen(false)}>Contact</Link>
           {user ? (
             <button className="mobile-link" onClick={handleLogout} style={{ textAlign: 'left', width: '100%', color: 'var(--error)' }}>Sign Out</button>
