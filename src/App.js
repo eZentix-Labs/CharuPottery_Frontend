@@ -17,6 +17,7 @@ import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import ResetPasswordPage from './pages/ResetPasswordPage';
 import ContactPage from './pages/ContactPage';
 import CollectionsPage from './pages/CollectionsPage';
+import AboutPage from './pages/AboutPage';
 
 // Protected pages
 import CartPage from './pages/CartPage';
@@ -74,6 +75,7 @@ export default function App() {
               <Route path="/products/:slug" element={<ProductDetailPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/collections" element={<CollectionsPage />} />
+              <Route path="/about" element={<AboutPage />} />
               <Route path="/login" element={<GuestRoute><LoginPage /></GuestRoute>} />
               <Route path="/register" element={<GuestRoute><RegisterPage /></GuestRoute>} />
               <Route path="/forgot-password" element={<ForgotPasswordPage />} />

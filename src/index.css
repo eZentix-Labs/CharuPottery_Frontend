@@ -173,7 +173,7 @@ ul { list-style: none; }
   overflow: hidden;
 }
 
-.container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+.container { max-width: 1640px; margin: 0 auto; padding: 0 40px; }
 .section { padding: 80px 0; }
 .section-sm { padding: 48px 0; }
 

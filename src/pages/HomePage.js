@@ -5,42 +5,10 @@ import ProductCard from '../components/product/ProductCard';
 import useReveal from '../hooks/useReveal';
 import './HomePage.css';
 
-/* Placeholder imagery — replace with your own artisan/workshop photos */
-const HERO_SLIDES = [
-  'https://images.unsplash.com/photo-1590422749897-47036da0b0ff?q=80&w=1200&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1610701596007-11502861dcfa?q=80&w=1200&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1525974160448-038dacadcc71?q=80&w=1200&auto=format&fit=crop',
-];
-
-/* Hand-drawn craft badge icons */
-const CraftIcons = {
-  hands: (
-    <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round">
-      <circle cx="20" cy="20" r="13" strokeDasharray="3 3" opacity=".5" />
-      <path d="M14 24c0-5 2.5-8 6-8s6 3 6 8" />
-      <path d="M13 24h14M16 13.5l1.5 2M24 13.5l-1.5 2M20 11v2.5" />
-    </svg>
-  ),
-  brush: (
-    <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round">
-      <path d="M26 10 15 21m11-11 3 3-11 11m-3-3-2.5 5.5L18 24" />
-      <path d="M11 29c2-1 4-1 6 0s4 1 6 0 4-1 6 0" opacity=".55" />
-    </svg>
-  ),
-  kiln: (
-    <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round">
-      <path d="M20 9c3 3.5 5.5 6.5 5.5 10a5.5 5.5 0 1 1-11 0c0-3.5 2.5-6.5 5.5-10Z" />
-      <path d="M20 17c1.3 1.6 2.3 3 2.3 4.6a2.3 2.3 0 1 1-4.6 0c0-1.6 1-3 2.3-4.6Z" opacity=".55" />
-      <path d="M12 31h16" />
-    </svg>
-  ),
-};
-
 export default function HomePage() {
   const [featured, setFeatured] = useState([]);
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [slide, setSlide] = useState(0);
 
   useEffect(() => {
     const load = async () => {
@@ -60,75 +28,10 @@ export default function HomePage() {
     load();
   }, []);
 
-  useEffect(() => {
-    const t = setInterval(() => setSlide((s) => (s + 1) % HERO_SLIDES.length), 5000);
-    return () => clearInterval(t);
-  }, []);
-
   useReveal([loading]);
 
   return (
     <div className="home">
-      {/* ── Hero ─────────────────────────────────────────── */}
-      <section className="hero">
-        <div className="toran" aria-hidden="true" />
-        <div className="hero-grid container">
-          <div className="hero-content">
-            <p className="hindi-accent">Village clay, shaped by skilled hands</p>
-            <p className="hero-eyebrow">Handcrafted · Time-Honored · Since 2004</p>
-            <h1 className="hero-title display">
-              CHARU: Crafting Handmade Clay Art for Over Two Decades.
-            </h1>
-            <p className="hero-subtitle">
-              Discover the soul of clay, shaped by experienced hands in our
-              traditional workshop. Every piece tells a story of Indian heritage.
-            </p>
-            <div className="hero-cta">
-              <Link to="/products" className="btn btn-primary">Shop Collection</Link>
-              <Link to="/contact" className="btn btn-outline">Meet the Artisan</Link>
-            </div>
-          </div>
-
-          <div className="hero-visual">
-            {HERO_SLIDES.map((src, i) => (
-              <img
-                key={src}
-                src={src}
-                alt="Artisan shaping clay pottery on the wheel"
-                className={`hero-img${i === slide ? ' active' : ''}`}
-                loading={i === 0 ? 'eager' : 'lazy'}
-              />
-            ))}
-            <div className="hero-dots">
-              {HERO_SLIDES.map((_, i) => (
-                <button
-                  key={i}
-                  className={`hero-dot${i === slide ? ' active' : ''}`}
-                  onClick={() => setSlide(i)}
-                  aria-label={`Slide ${i + 1}`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Craft badges ─────────────────────────────────── */}
-      <section className="craft-badges">
-        <div className="container craft-badges-inner">
-          {[
-            { icon: CraftIcons.hands, label: 'Traditionally Made' },
-            { icon: CraftIcons.brush, label: 'Hand-painted Designs' },
-            { icon: CraftIcons.kiln, label: 'Kiln-Fired Clay' },
-          ].map((b) => (
-            <div key={b.label} className="craft-badge reveal">
-              <span className="craft-badge-icon">{b.icon}</span>
-              <p>{b.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* ── Featured collections ─────────────────────────── */}
       <section className="section collections" id="collections">
         <div className="container">

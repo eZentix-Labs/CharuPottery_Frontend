@@ -5,13 +5,6 @@ import { useCart } from '../../context/CartContext';
 import { FiShoppingBag, FiHeart, FiUser, FiMenu, FiX, FiSearch, FiLogOut, FiPackage, FiSettings, FiHome, FiGrid } from 'react-icons/fi';
 import './Navbar.css';
 
-const MESSAGES = [
-  '🚚 Free Shipping Above ₹999',
-  '🏺 Handmade by Indian Artisans',
-  '⭐ 20+ Years of Craftsmanship',
-  '🪔 From Our Village Workshop to Your Home',
-  '🇮🇳 Made in India',
-];
 
 /* Hand-drawn clay pot mark */
 export function PotMark({ size = 30, color = 'currentColor' }) {
@@ -33,17 +26,11 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [search, setSearch] = useState('');
   const [searchOpen, setSearchOpen] = useState(false);
-  const [msgIndex, setMsgIndex] = useState(0);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
-  useEffect(() => {
-    const t = setInterval(() => setMsgIndex((i) => (i + 1) % MESSAGES.length), 3500);
-    return () => clearInterval(t);
   }, []);
 
   const handleLogout = async () => {
@@ -65,11 +52,6 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Announcement bar */}
-      <div className="announce-bar">
-        <span key={msgIndex} className="announce-msg">{MESSAGES[msgIndex]}</span>
-      </div>
-
       <header className={`navbar${scrolled ? ' scrolled' : ''}`}>
         {/* Top row: hamburger | logo | actions */}
         <div className="container navbar-top">
@@ -84,6 +66,13 @@ export default function Navbar() {
               <span className="logo-tag">Handcrafted Pottery</span>
             </span>
           </Link>
+
+          {/* Nav row */}
+          <nav className="navbar-links">
+            <NavLink to="/products" end className={navClass}>Shop All</NavLink>
+            <NavLink to="/about" className={navClass}>About Us</NavLink>
+            <Link to="/contact" className="nav-link">Contact</Link>
+          </nav>
 
           <div className="navbar-actions">
             <button className="action-btn" onClick={() => setSearchOpen(!searchOpen)} aria-label="Search">
@@ -136,12 +125,6 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Nav row */}
-        <nav className="navbar-links">
-          <NavLink to="/products" end className={navClass}>Shop All</NavLink>
-          <Link to="/contact" className="nav-link">Contact</Link>
-        </nav>
-
         {/* Search bar */}
         {searchOpen && (
           <div className="search-bar">
@@ -163,6 +146,7 @@ export default function Navbar() {
         <div className={`mobile-menu${menuOpen ? ' open' : ''}`}>
           <NavLink to="/" end className="mobile-link" onClick={() => setMenuOpen(false)}>Home</NavLink>
           <NavLink to="/products" className="mobile-link" onClick={() => setMenuOpen(false)}>Shop All</NavLink>
+          <NavLink to="/about" className="mobile-link" onClick={() => setMenuOpen(false)}>About Us</NavLink>
           <Link to="/contact" className="mobile-link" onClick={() => setMenuOpen(false)}>Contact</Link>
           {user ? (
             <button className="mobile-link" onClick={handleLogout} style={{ textAlign: 'left', width: '100%', color: 'var(--error)' }}>Sign Out</button>
